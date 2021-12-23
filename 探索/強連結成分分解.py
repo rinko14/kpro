@@ -38,7 +38,7 @@ class SCC:
                 if idx < len(self.graph[v]): # 隣接頂点番号 (頂点vが主役の)がvから出るエッジ数未満の時 (存在している)
                     stack[-1] += 1 # 隣接頂点番号に１を追加する
                     stack.append(self.graph[v][idx]) # その隣接している頂点を追加する (0オリジン、1を追加する前の番号を追加している)
-                    stack.append(0) # 隣接番号0を入れる
+                    stack.append(0) # 隣接番号0を入れる,０と隣接しているから移動先は０と隣接している？
                 else:
                     stack.pop() # 隣接頂点番号=0であり探索前もここで処理される
                     self.post_order.append(stack.pop())

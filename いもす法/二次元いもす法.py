@@ -2,7 +2,7 @@
 n = int(input())
 l = 1001 #メモリは0から1000まであるので。1001の要素数が必要
 s = [[0] * l for _ in range(l)]
-ans = [0] * (n + 1) # 紙が k 枚重なっている部分の面積
+ans = [0] * (n + 1) # 紙がk枚重なっている部分の面積
 
 for _ in range(n):
     lx, ly, rx, ry = map(int,input().split())
